@@ -908,6 +908,18 @@ void LoadSettings()
 
 int main(void)
 {
+		InitIO2Manual();
+//	
+	GPIO_ResetBits(poEnable);
+
+	GPIO_SetBits(GPIOB,GPIO_Pin_13); //p
+	GPIO_SetBits(GPIOB,GPIO_Pin_14); //p
+	GPIO_SetBits(GPIOB,GPIO_Pin_15); //p
+	delay_ms(1);
+	GPIO_ResetBits(GPIOA,GPIO_Pin_8);    //n
+	GPIO_ResetBits(GPIOA,GPIO_Pin_9);    //n
+	GPIO_ResetBits(GPIOA,GPIO_Pin_10);   //n
+	
 		SSD1306_Init();
 		delay_ms(100);
 		SSD1306_GotoXY(17, 5); //Устанавливаем курсор в позицию Сначала по горизонтали, потом вертикали.
