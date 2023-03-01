@@ -422,6 +422,9 @@ bool AmpControlOK()
 	if (nSetAmp == cntAmpVals)
 		nSetAmp = 0;
 	
+	
+	
+	
 	ret = 0;
 	for(int i = 0; i < cntAmpVals; i++)
 		ret += AmpVals[i];
